@@ -1,0 +1,66 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        exclude:
+          # Windows 与 macOS 各跑两个版本，够覆盖路径与编码差异
+          - os: windows-latest
+            python-version: "3.11"
+          - os: windows-latest
+            python-version: "3.12"
+          - os: macos-latest
+            python-version: "3.10"
+          - os: macos-latest
+            python-version: "3.12"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: 跑测试
+        shell: bash
+        run: python run_tests.py
+
+      - name: 冒烟测试（命令行）
+        shell: bash
+        run: |
+          python run.py calc "=SUM(1,2,3)*2"
+          python run.py demo > /dev/null
+          python run.py run examples/quarterly.json
+          python run.py audit examples/loan.json "贷款!B8"
+
+      - name: 冒烟测试（JSON 往返一致）
+        shell: bash
+        run: |
+          python - <<'PY'
+          from soroban import Workbook
+
+          wb = Workbook.load("examples/quarterly.json")
+          assert wb.get("汇总!B8") == 3166, wb.get("汇总!B8")
+          wb.save("roundtrip.json")
+          assert Workbook.load("roundtrip.json").to_json() == wb.to_json()
+          print("往返一致")
+          PY
+
+      - name: 安装为包
+        shell: bash
+        run: |
+          pip install -e .
+          soroban --version

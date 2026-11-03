@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soroban · 电子表格计算引擎</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+      <rect x="3" y="4" width="26" height="24" rx="5" fill="#0f766e"/>
+      <path d="M9 8v16M16 8v16M23 8v16" stroke="#f7f3ea" stroke-width="1.4" opacity=".55"/>
+      <circle cx="9" cy="13" r="2.5" fill="#f7f3ea"/>
+      <circle cx="16" cy="19" r="2.5" fill="#f7f3ea"/>
+      <circle cx="23" cy="11" r="2.5" fill="#f7f3ea"/>
+    </svg>
+    <div class="brand-text">
+      <h1>Soroban</h1>
+      <p>电子表格计算引擎 · 零依赖</p>
+    </div>
+  </div>
+  <div class="actions">
+    <span class="badge" id="version">v1.0.0</span>
+    <button class="ghost" id="btn-demo">载入示例</button>
+    <button class="primary" id="btn-recalc">重新计算</button>
+  </div>
+</header>
+
+<main>
+  <section class="sheet-panel">
+    <div class="formula-bar">
+      <span class="address" id="address">经营!A1</span>
+      <span class="fx">fx</span>
+      <input id="formula" type="text" spellcheck="false" autocomplete="off"
+             placeholder="输入值或公式，例如 =SUM(B2:B7)">
+    </div>
+
+    <div class="grid-wrap" id="grid-wrap">
+      <div id="grid" tabindex="0"></div>
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+  </section>
+
+  <aside class="sidebar">
+    <section class="card">
+      <div class="card-head">
+        <h2>审计</h2>
+        <span class="hint">选中单元格</span>
+      </div>
+      <div id="audit-body" class="card-body">
+        <p class="placeholder">点一个格子，看看它的结果是从哪里算出来的。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>目标搜索</h2>
+        <span class="hint">反解输入</span>
+      </div>
+      <div class="card-body">
+        <label class="field">
+          <span>目标格</span>
+          <input id="goal-target" value="贷款!B6" spellcheck="false">
+        </label>
+        <label class="field">
+          <span>自变量</span>
+          <input id="goal-variable" value="贷款!B4" spellcheck="false">
+        </label>
+        <label class="field">
+          <span>期望值</span>
+          <input id="goal-value" value="6000" spellcheck="false">
+        </label>
+        <label class="check">
+          <input type="checkbox" id="goal-apply">
+          <span>把解写回表格</span>
+        </label>
+        <button class="primary wide" id="btn-goal">求解</button>
+        <div id="goal-result" class="result"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>本次重算</h2>
+        <span class="hint" id="recalc-mode">增量</span>
+      </div>
+      <div class="card-body">
+        <div class="stats" id="stats">
+          <div><b>—</b><span>公式</span></div>
+          <div><b>—</b><span>毫秒</span></div>
+          <div><b>0</b><span>循环</span></div>
+        </div>
+      </div>
+    </section>
+  </aside>
+</main>
+
+<footer>
+  <span id="status">正在连接引擎……</span>
+  <span class="keys">方向键移动 · 直接输入编辑 · Enter 提交 · Delete 清空</span>
+  <span class="foot-version" id="foot">Soroban</span>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

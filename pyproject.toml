@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soroban"
+version = "1.0.0"
+description = "零依赖的电子表格计算引擎：公式解析、依赖图、增量重算与目标搜索"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "遥か" }]
+keywords = ["spreadsheet", "formula", "parser", "dependency-graph", "recalculation"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Spreadsheet",
+    "Topic :: Software Development :: Interpreters",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/18971181532/soroban"
+Issues = "https://github.com/18971181532/soroban/issues"
+
+[project.scripts]
+soroban = "soroban.cli:main"
+
+[tool.setuptools]
+packages = ["soroban"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

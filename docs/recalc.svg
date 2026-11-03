@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="690" height="340" viewBox="0 0 690 340">
+<rect width="690" height="340" fill="#fffdf8"/>
+<text x="28.0" y="30.0" font-size="15" fill="#241f1a" text-anchor="start" font-weight="bold" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">改一个格子有多快？</text>
+<text x="28.0" y="49.0" font-size="10" fill="#857a6b" text-anchor="start" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">同一份表（40,000 个公式），全量重算 vs 增量重算；纵轴为对数刻度。</text>
+<line x1="66" y1="286.0" x2="636" y2="286.0" stroke="#ece4d6" stroke-width="1"/>
+<text x="56.0" y="290.0" font-size="9" fill="#a99e8d" text-anchor="end" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">0.01</text>
+<line x1="66" y1="249.6" x2="636" y2="249.6" stroke="#ece4d6" stroke-width="1"/>
+<text x="56.0" y="253.6" font-size="9" fill="#a99e8d" text-anchor="end" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">0.1</text>
+<line x1="66" y1="213.2" x2="636" y2="213.2" stroke="#ece4d6" stroke-width="1"/>
+<text x="56.0" y="217.2" font-size="9" fill="#a99e8d" text-anchor="end" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">1</text>
+<line x1="66" y1="176.8" x2="636" y2="176.8" stroke="#ece4d6" stroke-width="1"/>
+<text x="56.0" y="180.8" font-size="9" fill="#a99e8d" text-anchor="end" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">10</text>
+<line x1="66" y1="140.4" x2="636" y2="140.4" stroke="#ece4d6" stroke-width="1"/>
+<text x="56.0" y="144.4" font-size="9" fill="#a99e8d" text-anchor="end" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">100</text>
+<line x1="66" y1="104.0" x2="636" y2="104.0" stroke="#ece4d6" stroke-width="1"/>
+<text x="56.0" y="108.0" font-size="9" fill="#a99e8d" text-anchor="end" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">1000</text>
+<text x="20.0" y="88.0" font-size="9" fill="#857a6b" text-anchor="start" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">毫秒</text>
+<text x="66.0" y="314.0" font-size="10" fill="#7a6a58" text-anchor="middle" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">500 行</text>
+<text x="256.0" y="314.0" font-size="10" fill="#7a6a58" text-anchor="middle" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">2,000 行</text>
+<text x="446.0" y="314.0" font-size="10" fill="#7a6a58" text-anchor="middle" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">8,000 行</text>
+<text x="636.0" y="314.0" font-size="10" fill="#7a6a58" text-anchor="middle" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">20,000 行</text>
+<polyline fill="none" stroke="#0f766e" stroke-width="2.4" stroke-linejoin="round" points="66.0,191.2 256.0,170.1 446.0,146.5 636.0,129.7"/>
+<circle cx="66.0" cy="191.2" r="3.6" fill="#0f766e"/>
+<circle cx="256.0" cy="170.1" r="3.6" fill="#0f766e"/>
+<circle cx="446.0" cy="146.5" r="3.6" fill="#0f766e"/>
+<circle cx="636.0" cy="129.7" r="3.6" fill="#0f766e"/>
+<polyline fill="none" stroke="#b45309" stroke-width="2.4" stroke-linejoin="round" points="66.0,245.6 256.0,260.2 446.0,250.0 636.0,255.8"/>
+<circle cx="66.0" cy="245.6" r="3.6" fill="#b45309"/>
+<circle cx="256.0" cy="260.2" r="3.6" fill="#b45309"/>
+<circle cx="446.0" cy="250.0" r="3.6" fill="#b45309"/>
+<circle cx="636.0" cy="255.8" r="3.6" fill="#b45309"/>
+<text x="72.0" y="181.2" font-size="9.5" fill="#0f766e" text-anchor="start" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">4.0</text>
+<text x="262.0" y="160.1" font-size="9.5" fill="#0f766e" text-anchor="start" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">15.3</text>
+<text x="452.0" y="136.5" font-size="9.5" fill="#0f766e" text-anchor="start" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">68.1</text>
+<text x="642.0" y="119.7" font-size="9.5" fill="#0f766e" text-anchor="start" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">197.3</text>
+<text x="642.0" y="259.8" font-size="9.5" fill="#b45309" text-anchor="start" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">0.07</text>
+<circle cx="500" cy="68" r="4" fill="#0f766e"/>
+<text x="510.0" y="72.0" font-size="10" fill="#241f1a" text-anchor="start" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">全量重算</text>
+<circle cx="582" cy="68" r="4" fill="#b45309"/>
+<text x="592.0" y="72.0" font-size="10" fill="#241f1a" text-anchor="start" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">增量重算</text>
+<rect x="22" y="57" width="142" height="22" rx="11" fill="#fbf1e0" stroke="#eeddc2" stroke-width="1"/>
+<text x="33.0" y="72.0" font-size="11" fill="#b45309" text-anchor="start" font-weight="bold" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">2 万行时增量快 2,915×</text>
+<text x="66.0" y="332.0" font-size="9.5" fill="#857a6b" text-anchor="start" font-weight="normal" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif">增量只重算被改动格子的下游，与整表规模基本无关。</text>
+</svg>
