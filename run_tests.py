@@ -10,8 +10,11 @@ import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from soroban.console import enable_utf8  # noqa: E402  必须在打印中文之前
+
 
 def main() -> int:
+    enable_utf8()
     start = time.perf_counter()
     loader = unittest.TestLoader()
     suite = loader.discover(os.path.join(os.path.dirname(__file__), "tests"),
